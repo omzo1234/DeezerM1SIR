@@ -20,7 +20,7 @@ class MusicPlayerProvider with ChangeNotifier {
   }
 
   void togglePlayPause(Music music) {
-    if (_currentMusic == music && _isPlaying) {
+    if (_currentMusic == music && _isPlaying== true) {
       pauseMusic();
     } else {
       playMusic(music);

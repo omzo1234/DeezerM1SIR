@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
   Future<List<Music>> _fetchMusic(String query) async {
     try {
       final response = await http.get(
-        Uri.parse("https://api.deezer.com/search?q=$query"),
+        Uri.parse("https://api.deezer.com/search?q=youssou%20ndour"),
       );
 
       if (response.statusCode == 200) {
@@ -167,6 +167,7 @@ class _MusicTile extends StatelessWidget {
             color: Colors.cyan,
           ),
           onPressed: () => player.togglePlayPause(music),
+          
         ),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       ),
